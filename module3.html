@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loops & Arrays Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; line-height: 1.5; }
+    h1 { margin-bottom: 0.5rem; }
+    .card { border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    code { background: #f6f8fa; padding: 0.15rem 0.35rem; border-radius: 4px; }
+    ul { margin-top: 0.5rem; }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Loops & Arrays – Demo</h1>
+  <p>This page demonstrates: a <strong>for</strong> loop (odd/even), a <strong>do…while</strong> loop (counting up to your number), and <strong>arrays</strong> (forEach + comma-separated output).</p>
+
+  <section id="forLoop" class="card">
+    <h2>For Loop: Odd/Even (0 to 10)</h2>
+    <div id="forOutput"></div>
+  </section>
+
+  <section id="doWhileLoop" class="card">
+    <h2>Do…While Loop: Count to <code>myNum</code> (5–20)</h2>
+    <div id="doWhileOutput"></div>
+  </section>
+
+  <section id="arrayDemo" class="card">
+    <h2>Array Demo: Subjects</h2>
+    <h3>Readable list (forEach)</h3>
+    <ul id="subjectsList"></ul>
+    <h3>Comma-separated (one statement)</h3>
+    <p id="subjectsCSV"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
