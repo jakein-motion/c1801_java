@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tip Calculator</title>
+</head>
+<body>
+
+<h2>Service Tip Calculator</h2>
+
+<script>
+// Function to validate service quality input
+function validateServiceQuality(quality) {
+    quality = quality.toLowerCase();
+    return (quality === "great" || quality === "ok" || quality === "poor");
+}
+
+// Function to validate the service amount
+function validateAmount(amount) {
+    return (amount >= 5 && amount <= 500);
+}
+
+// Function to calculate the tip
+function calculateTip(amount, quality) {
+    let tipRate = 0;
+    
+    if (quality === "great") tipRate = 0.20;
+    else if (quality === "ok") tipRate = 0.15;
+    else if (quality === "poor") tipRate = 0.10;
+
+    return amount * tipRate;
+}
+
+// Get user input
+let amount = parseFloat(prompt("Enter the cost of the service (between $5 and $500):"));
+let quality = prompt("Enter service quality (great, ok, or poor):");
+
+// Validate inputs
+if (!validateAmount(amount)) {
+    document.write("Invalid service amount. Please refresh and try again.");
+} 
+else if (!validateServiceQuality(quality)) {
+    document.write("Invalid service quality. Please refresh and try again.");
+} 
+else {
+    // Calculate and display
+    let tip = calculateTip(amount, quality.toLowerCase());
+    document.write(
+        "Service Amount: $" + amount.toFixed(2) + "<br>" +
+        "Service Quality: " + quality + "<br>" +
+        "Recommended Tip: $" + tip.toFixed(2)
+    );
+}
+</script>
+
+</body>
+</html>
